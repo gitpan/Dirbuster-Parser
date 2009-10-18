@@ -6,7 +6,7 @@ Dirbuster::Parser - Parse Dirbuster scan data with Perl
 
 =head1 VERSION
 
-This document describes Dirbuster::Parser version .01
+This document describes Dirbuster::Parser version .02
 
 =head1 SYNOPSIS
 
@@ -91,23 +91,23 @@ Returns the path.
 
 Here is an example of parsing an XML file using Dirbuster::Parser:
 
-my $dpx = new Dirbuster::Parser;
+ my $dpx = new Dirbuster::Parser;
 
-my $parser = $dpx->parse_file('test1.xml');
+ my $parser = $dpx->parse_file('test1.xml');
 
-print "Directories:\n";
-foreach my $h ( grep($_->type eq "Dir", $parser->get_all_results()) ) {
+ print "Directories:\n";
+ foreach my $h ( grep($_->type eq "Dir", $parser->get_all_results()) ) {
     print "Type: " . $h->type . "\n";
     print "Path: " . $h->path . "\n";
     print "Response Code: " . $h->response_code . "\n";
-}
+ }
 
-print "Files:\n";
-foreach my $h ( grep($_->type eq "File", $parser->get_all_results()) ) {
-    print "Type: " . $h->type . "\n";
-    print "Path: " . $h->path . "\n";
-    print "Response Code: " . $h->response_code . "\n";
-}
+ print "Files:\n";
+ foreach my $h ( grep($_->type eq "File", $parser->get_all_results()) ) {
+   print "Type: " . $h->type . "\n";
+   print "Path: " . $h->path . "\n";
+   print "Response Code: " . $h->response_code . "\n";
+ }
 
 
 =head1 SEE ALSO

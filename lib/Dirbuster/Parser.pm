@@ -1,7 +1,7 @@
 # $Id: Parser.pm 71 2008-08-31 05:58:17Z jabra $
 package Dirbuster::Parser;
 {
-    our $VERSION = '0.01';
+    our $VERSION = '0.02';
     $VERSION = eval $VERSION;
 
     use Object::InsideOut;
